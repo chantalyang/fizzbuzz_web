@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+</head>
+	<body>
+
+	<h1>Fizzbuzz Web</h1>
+
+<table class = "table">
+	<thead>
+	<tr>
+		<th>Number</th>
+		<th>Fizz</th>
+		<th>Buzz</th>
+	</tr>
+	</thead>
+	<tbody>
+		{% for i in range (1, 101) %}
+      		<tr>
+        	<td>{{i}}</td>
+
+        	{% if (i%3 == 0) and (i%5 == 0) %}
+        	<td > <i class="glyphicon glyphicon-ok" style="color:green"></i></td>
+        	<td > <i class="glyphicon glyphicon-ok" style="color:green"></i></td>
+        	{%elif (i%3 ==0) %}
+        	<td><i class="glyphicon glyphicon-ok"></i></td>
+        	<td></td>
+        	{%elif (i%5 ==0) %}
+        	<td></td>
+        	<td><i class="glyphicon glyphicon-ok"></i></td>
+        	{% else %}
+        	<td></td>
+        	<td></td>
+        	{% endif %}
+
+     		</tr>
+     	{% endfor %}
+    </tbody>
+
+</table>
+
+	<!-- {% for i in range (1, 101) %}
+		{% if (i%3 == 0) and (i%5 == 0) %}
+		<p>{{i}} fizzbuzz<p>
+		{% elif (i%3 == 0) %}
+		<p>{{i}} fizz<p>
+		{% elif (i%5 == 0) %}
+		<p>{{i}} buzz<p>
+		{% else %}
+		<p>{{i}}<p>
+		{% endif %}
+	{% endfor %} -->
+
+	</body>
+</html>
