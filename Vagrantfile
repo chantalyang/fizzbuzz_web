@@ -10,6 +10,7 @@
 $script = <<SCRIPT
     apt-get install python-pip -y
     sudo pip install virtualenv
+    cd /vagrant
     virtualenv venv
     . venv/bin/activate
     pip install Flask

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-. venv/bin/activate
+source venv/bin/activate
 python fizzbuzz.py
