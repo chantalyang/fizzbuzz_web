@@ -6,10 +6,10 @@ Fizzbuzz from 1 to 100:
 - If the number is divisible by 3 and 5, green ticks are displayed in both the "Fizz" and "Buzz" column
 
 ## Starting the server and virtual environment
-`vagrant up
+`vagrant up`
 
-`vagrant ssh
+`vagrant ssh`
 
-`cd /vagrant
+`cd /vagrant`
 
-`./start.sh
+`./start.sh`
