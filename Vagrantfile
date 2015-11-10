@@ -5,6 +5,16 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+
+
+$script = <<SCRIPT
+    apt-get install python-pip -y
+    sudo pip install virtualenv
+    virtualenv venv
+    . venv/bin/activate
+    pip install Flask
+SCRIPT
+
 Vagrant.configure(2) do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -69,4 +79,10 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get update
   #   sudo apt-get install -y apache2
   # SHELL
+
+  config.vm.provision "shell", inline: $script
+
+
+
+
 end
